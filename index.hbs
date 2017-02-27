@@ -46,7 +46,13 @@
         </header>
         <div class="row">
             {{! The tag below includes the post loop - partials/loop.hbs }}
-            {{> loop}}
+            {{#if loop}}
+            	{{> loop}}
+            {{/if}}
+            {{! Previous/next page links - displayed on every page }}
+			{{#if pagination}}
+				{{> pagination}}
+			{{/if}}	
         </div>
         <footer>
         	<ul class="actions">
