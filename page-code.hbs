@@ -30,6 +30,10 @@
     
 </section>
 {{/post}}
-{{#foreach tags}}
+<footer>
+	<div>
+		{{#foreach tags}}
 			<p><a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a></p>
-{{/foreach}}
+		{{/foreach}}
+	</div>
+</footer>
