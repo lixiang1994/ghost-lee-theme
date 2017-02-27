@@ -7,15 +7,18 @@
     {{navigation}}
 </header>
 
-<section id="two" class="wrapper style2 align-center">
+<section class="wrapper style2 align-center">
     <div class="container">
         <header>
             <h2>{{tag.name}}</h2>
         </header>
-        <div class="row">
-            {{! The tag below includes the post loop - partials/loop.hbs }}
-            {{> loop}}
-        </div>
+        {{#foreach posts}}
+        	<article>
+         		<header class="post-header">
+            		<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+         		</header>
+       		 </article>
+    	{{/foreach}}
         {{#if pagination}}
 			{{pagination}}
    		{{/if}}
