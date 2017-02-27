@@ -1,19 +1,6 @@
 {{!< default}}
 
-{{! The big featured header }}
-<header id="header" class="{{#if @blog.cover}}">
-    <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-    {{navigation}}
-</header>
-
-<!-- Banner -->
-<section id="banner" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-    <h2>{{@blog.title}}</h2>
-    <p>{{@blog.description}}</p>
-    <ul class="actions"><li><a href="#two" class="button big">查看更多</a></li></ul>
-</section>
-
-<section class="wrapper" tabindex="0">
+<section class="wrapper">
   <div class="wrapper-container">
     <header>
       <h2>{{tag.name}}</h2>
@@ -28,7 +15,5 @@
     {{#if pagination}}
       {{pagination}}
     {{/if}}
-
-    {{> footer this}}
   </div>
 </section>
