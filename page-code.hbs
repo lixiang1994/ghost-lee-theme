@@ -32,8 +32,12 @@
 {{/post}}
 <footer>
 	<div>
-		{{#foreach tags}}
-			<p><a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a></p>
-		{{/foreach}}
+	{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+            {{#foreach tags}}
+          
+			<p><a href="/tag/{{slug}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a></p>
+			
+			{{/foreach}}
+	{{/get}}
 	</div>
 </footer>
