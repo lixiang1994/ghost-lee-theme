@@ -1,4 +1,11 @@
 {{!< default}}
+{{#tags}}
+<header id="header" class="main-header post-head">
+    <h1>
+        <a href="{{@blog.url}}">{{@blog.title}}</a>
+    </h1>
+    {{navigation}}
+</header>
 
 <section class="wrapper">
   <div class="wrapper-container">
@@ -17,3 +24,4 @@
     {{/if}}
   </div>
 </section>
+{{/tags}}
