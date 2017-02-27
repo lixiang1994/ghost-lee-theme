@@ -25,14 +25,16 @@
         {{/if}}
 
         {{content}}
-        
-        {{#foreach tags}}
-			<a href="{{url}}" class="tag-item">{{name}}<span class="post-count">{{post_count}}</span></a>
-		{{/foreach}}
-       
+    </div>
+</section>
+<footer>
+    	
+     	{{> loop}}
+       	
         {{#if pagination}}
 			{{pagination}}
    		{{/if}}
-    </div>
-</section>
+   		
+</footer>
+    
 {{/post}}
