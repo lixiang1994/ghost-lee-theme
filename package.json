@@ -1,4 +1,7 @@
 {
-  "name": “LEE”,
-  "version": "1.0.0"
+    "name": "lee-theme",
+    "version": "0.1.0",
+    "description": "a simple theme",
+    "author": "LEE",
+    "homepage": "http://www.lee1994.com"
 }

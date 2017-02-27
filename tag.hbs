@@ -1,0 +1,23 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header id="header" class="{{#if @blog.cover}}">
+    <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{navigation}}
+</header>
+
+<section id="two" class="wrapper style2 align-center">
+    <div class="container">
+        <header>
+            <h2>{{tag.name}}</h2>
+        </header>
+        <div class="row">
+            {{! The tag below includes the post loop - partials/loop.hbs }}
+            {{> loop}}
+        </div>
+        {{#if pagination}}
+			{{pagination}}
+   		{{/if}}
+    </div>
+</section>
