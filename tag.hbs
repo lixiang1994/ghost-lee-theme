@@ -8,9 +8,11 @@
 </header>
 
 <!-- Banner -->
-<section id="banner" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<section id="banner" style="background-image: url({{tag.cover}}){{else}}no-cover{{/if}}">
     <h2>{{tag.name}}</h2>
-    <p>共{{posts.count}}篇文章</p>
+    <p>共{{count.posts}}篇文章</p>
+    <p>共{{posts}}篇文章</p>
+    <p>共{{count.posts}}篇文章</p>
 </section>
 
 {{! The main content area on the homepage }}
