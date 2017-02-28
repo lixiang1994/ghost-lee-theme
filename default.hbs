@@ -13,7 +13,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="stylesheet" href="{{assets "css/main.css"}}" />
+		<link rel="stylesheet" href="{{asset "css/main.css"}}" />
 		
 		{{ghost_head}}
 		
@@ -41,7 +41,7 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="banner" class="bg-img" data-bg="assets/images/banner.jpg">
+			<section id="banner" class="bg-img" data-bg="{{@blog.cover}}">
 				<div class="inner">
 					<header>
 						<h1>{{@blog.title}}</h1>
@@ -117,12 +117,12 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="{{assets "js/jquery.min.js"}}"></script>
-			<script src="{{assets "js/jquery.scrolly.min.js"}}"></script>
-			<script src="{{assets "js/jquery.scrollex.min.js"}}"></script>
-			<script src="{{assets "js/skel.min.js"}}"></script>
-			<script src="{{assets "js/util.js"}}"></script>
-			<script src="{{assets "js/main.js"}}"></script>
+			<script src="{{asset "js/jquery.min.js"}}"></script>
+			<script src="{{asset "js/jquery.scrolly.min.js"}}"></script>
+			<script src="{{asset "js/jquery.scrollex.min.js"}}"></script>
+			<script src="{{asset "js/skel.min.js"}}"></script>
+			<script src="{{asset "js/util.js"}}"></script>
+			<script src="{{asset "js/main.js"}}"></script>
 			
 		{{ghost_foot}}
 		
