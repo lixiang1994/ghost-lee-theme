@@ -9,9 +9,8 @@
 
 <!-- Banner -->
 <section id="banner" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-    <h2>{{tag.title}}</h2>
-    <p>共{{pages}}篇文章</p>
-    <ul class="actions"><li><a href="#two" class="button big">查看更多</a></li></ul>
+    <h2>{{tag.name}}</h2>
+    <p>共{{posts.count}}篇文章</p>
 </section>
 
 {{! The main content area on the homepage }}
