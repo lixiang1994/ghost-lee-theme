@@ -1684,6 +1684,12 @@
 		margin: 0 0 2em 0;
 	}
 
+        p img {
+            width:100%;
+            border-radius: 4px;
+            display: block;
+        }
+
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 600;
 		line-height: 1.5;
