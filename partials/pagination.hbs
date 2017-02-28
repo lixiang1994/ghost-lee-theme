@@ -1,10 +1,10 @@
 <footer>
 	<ul class="actions">
-		{{#if prev}}
-			<li><a href="{{page_url prev}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a></li>
-		{{/if}}
-		{{#if next}}
-			<li><a href="{{page_url next}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a></li>
-		{{/if}}
+		{{# prev_post}}
+			<li><a href="{{url}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a></li>
+		{{/prev_post}}
+		{{# next_post}}
+			<li><a href="{{url}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a></li>
+		{{/next_post}}
 	</ul>
 </footer>
