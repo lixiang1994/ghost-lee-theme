@@ -12,13 +12,13 @@
 						<h1>{{@blog.title}}</h1>
 					</header>
 				</div>
-				<a href="#one1" class="more">了解更多</a>
+				<a href="#post_index_0" class="more">了解更多</a>
 			</section>
 
 		<!-- 文章 -->
 		{{#foreach posts}}
 		
-			<section id="{{id}}" class="wrapper post bg-img" data-bg="{{image}}">
+			<section id="post_index_{{@index}}" class="wrapper post bg-img" data-bg="{{image}}">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -36,7 +36,7 @@
 				
 				{{#if @last}}
    				{{else}}
-    				<a href="#{{id}}" class="more">Learn More</a>
+    				<a href="#post_index_{{@index +1}}" class="more">Learn More</a>
  				{{/if}}
 			</section>
 			
