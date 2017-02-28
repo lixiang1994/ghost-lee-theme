@@ -6,27 +6,34 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header id="header" class="main-header post-head">
-    <h1>
-        <a href="{{@blog.url}}">{{@blog.title}}</a>
-    </h1>
-    {{navigation}}
-</header>
-
-<section id="main" class="wrapper">
-    <div class="container {{post_class}}">
-
-        <header class="major">
-            <h2>{{title}}</h2>
-            <p><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}</p>
-        </header>
-
-        {{#if image}}
-            <a href="#" class="image fit"><img src="{{image}}" alt="" /></a>
-        {{/if}}
-
-        {{content}}
-    </div>
-</section>
+<!-- Content -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="post" class="wrapper bg-img" data-bg="{{image}}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{title}}</h2>
+							<p>{{date format='YYYY MM DD'}}</p>
+						</header>
+						<div class="content">
+							{{content}}
+						</div>
+						<footer>
+							<ul class="actions">
+								{{#if prev}}
+									<li><a href="{{page_url prev}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a></li>
+								{{/if}}
+	    						{{#if next}}
+									<li><a href="{{page_url next}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a></li>
+								{{/if}}
+							</ul>
+						</footer>
+					</article>
+				</div>
+			</section>
 
 {{/post}}
