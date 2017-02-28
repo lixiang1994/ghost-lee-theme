@@ -1,0 +1,28 @@
+{{!< default}}
+
+<!-- 文章列表 -->
+{{#foreach posts}}
+			
+	<section id="post_index_{{@index}}" class="wrapper post bg-img" data-bg="{{image}}">
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>{{title}}</h2>
+					<p>{{date format="YYYY MMMM DD"}}</p>
+				</header>
+				<div class="content">
+					<p>{{excerpt characters="60"}}</p>
+				</div>
+				<footer>
+					<a href="{{url}}" class="button alt">查看更多</a>
+				</footer>
+			</article>
+		</div>
+				
+		{{#if @last}}
+   		{{else}}
+    		<a href="#post_index_{{@number}}" class="more">Learn More</a>
+ 		{{/if}}
+	</section>
+			
+{{/foreach}}

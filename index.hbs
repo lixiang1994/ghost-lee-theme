@@ -1,43 +1,43 @@
 {{!< default}}
 
 <!-- Banner -->
-		<!--
-			Note: To show a background image, set the "data-bg" attribute below
-			to the full filename of your image. This is used in each section to set
-			the background image.
-		-->
-			<section id="banner" class="bg-img" data-bg="{{@blog.cover}}">
-				<div class="inner">
-					<header>
-						<h1>{{@blog.title}}</h1>
-					</header>
-				</div>
-				<a href="#post_index_0" class="more">了解更多</a>
-			</section>
+<!--
+	Note: To show a background image, set the "data-bg" attribute below
+	to the full filename of your image. This is used in each section to set
+	the background image.
+-->
+	<section id="banner" class="bg-img" data-bg="{{@blog.cover}}">
+		<div class="inner">
+			<header>
+				<h1>{{@blog.title}}</h1>
+			</header>
+		</div>
+		<a href="#post_index_0" class="more">了解更多</a>
+	</section>
 
-		<!-- 文章 -->
-		{{#foreach posts limit="4"}}
-			
-			<section id="post_index_{{@index}}" class="wrapper post bg-img" data-bg="{{image}}">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>{{title}}</h2>
-							<p>{{date format="YYYY MMMM DD"}}</p>
-						</header>
-						<div class="content">
-							<p>{{excerpt characters="60"}}</p>
-						</div>
-						<footer>
-							<a href="{{url}}" class="button alt">查看更多</a>
-						</footer>
-					</article>
+<!-- 文章 -->
+{{#foreach posts limit="4"}}
+
+	<section id="post_index_{{@index}}" class="wrapper post bg-img" data-bg="{{image}}">
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>{{title}}</h2>
+					<p>{{date format="YYYY MMMM DD"}}</p>
+				</header>
+				<div class="content">
+					<p>{{excerpt characters="200"}}</p>
 				</div>
-				
-				{{#if @last}}
-   				{{else}}
-    				<a href="#post_index_{{@number}}" class="more">Learn More</a>
- 				{{/if}}
-			</section>
-			
-		{{/foreach}}
+				<footer>
+					<a href="{{url}}" class="button alt">查看更多</a>
+				</footer>
+			</article>
+		</div>
+
+		{{#if @last}}
+		{{else}}
+			<a href="#post_index_{{@number}}" class="more">Learn More</a>
+		{{/if}}
+	</section>
+
+{{/foreach}}

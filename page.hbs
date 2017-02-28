@@ -6,25 +6,24 @@
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
 
-<!-- Content -->
-		<!--
-			Note: To show a background image, set the "data-bg" attribute below
-			to the full filename of your image. This is used in each section to set
-			the background image.
-		-->
-			<section id="post" class="wrapper bg-img" data-bg="{{image}}">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>{{title}}</h2>
-							<p>{{date format='YYYY MM DD'}}</p>
-						</header>
-						<div class="content">
-							{{content}}
-						</div>
-						{{> pagination}}
-					</article>
+	<!-- Content -->
+	<!--
+		Note: To show a background image, set the "data-bg" attribute below
+		to the full filename of your image. This is used in each section to set
+		the background image.
+	-->
+	<section id="post" class="wrapper bg-img" data-bg="{{image}}">
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>{{title}}</h2>
+					<p>{{date format='YYYY MM DD'}}</p>
+				</header>
+				<div class="content">
+					{{content}}
 				</div>
-			</section>
+			</article>
+		</div>
+	</section>
 
 {{/post}}
