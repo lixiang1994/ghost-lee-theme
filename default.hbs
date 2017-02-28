@@ -21,8 +21,8 @@
 		{{ghost_head}}
 		
 	</head>
-	<body>
-
+	<body {{#is "home"}} {{else}} class="subpage" {{/is}}>
+	
 		<!-- Header -->
 			<header id="header" {{#is "home"}} {{else}} class="alt" {{/is}} >
 				<div class="logo"><a href="{{@blog.url}}">{{@blog.title}}<span></span></a></div>
