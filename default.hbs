@@ -1,84 +1,130 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-<head>
-    {{! Document Settings }}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<head>
+		{{! Page Meta }}
+    	<title>{{meta_title}}</title>
+   		<meta name="description" content="{{meta_description}}" />
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="{{assets "css/main.css"}}" />
+		
+		{{ghost_head}}
+		
+	</head>
+	<body>
 
-    {{! Page Meta }}
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}" />
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="{{@blog.url}}">{{@blog.title}}<span></span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					{{#foreach navigation}}
+						<li><a href="{{url absolute="true"}}">{{label}}</a></li>
+					{{/foreach}}
+				</ul>
+			</nav>
 
-    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="assets/images/banner.jpg">
+				<div class="inner">
+					<header>
+						<h1>{{@blog.title}}</h1>
+					</header>
+				</div>
+				<a href="#one1" class="more">了解更多</a>
+			</section>
 
-    {{! Styles'n'Scripts }}
-    <style type="text/css">body.no-flash{visibility: hidden;}</style>
-    <!--[if lte IE 8]><script src="{{asset "css/ie/html5shiv.js"}}"></script><![endif]-->
-    <script src="{{asset "js/jquery.min.js"}}"></script>
-    <script src="{{asset "js/skel.min.js"}}"></script>
-    <script src="{{asset "js/skel-layers.min.js"}}"></script>
-    <script src="{{asset "js/init.js"}}"></script>
-    <noscript>
-        <link rel="stylesheet" href="{{asset "css/skel.css"}}" />
-        <link rel="stylesheet" href="{{asset "css/style.css"}}" />
-        <link rel="stylesheet" href="{{asset "css/style-xlarge.css"}}" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="{{asset "css/ie/v8.css"}}" /><![endif]-->
+		<!-- 文章 -->
+		{{#foreach posts}}
+		
+			<section id="{{id}}" class="wrapper post bg-img" data-bg="{{image}}">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>{{title}}</h2>
+							<p>{{date format="YYYY MMMM DD"}}</p>
+						</header>
+						<div class="content">
+							<p>{{excerpt characters="60"}}</p>
+						</div>
+						<footer>
+							<a href="{{url}}" class="button alt">查看更多</a>
+						</footer>
+					</article>
+				</div>
+				
+				{{#if @last}}
+   				{{else}}
+    				<a href="#{{id}}" class="more">Learn More</a>
+ 				{{/if}}
+			</section>
+			
+		{{/foreach}}
 
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
-</head>
-<body class="{{body_class}} no-flash">
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<!--
+					<h2>Contact Me</h2>
+					
+					<form action="#" method="post">
 
-    <div class="site-wrapper">
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+					-->
+					<ul class="icons">
+						<li><a href="#" class="icon round fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon round fa-wechat"><span class="label">Wechat</span></a></li>
+						<li><a href="#" class="icon round fa-weibo"><span class="label">微博</span></a></li>
+					</ul>
+					
+					<div class="copyright">
+						<p>Copyright &copy; <a href="{{@blog.url}}">{{@blog.title}}</a> {{date format="YYYY"}} • All rights reserved.</p>
+						<p>京ICP备19940702号</p>
+					</div>
 
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+				</div>
+			</footer>
 
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <section class="4u 6u(medium) 12u$(small)">
-                        <h3>Mail</h3>
-                        <ul class="alt">
-                            <li>
-                                <a href="mailto:18611401994@163.com" target="_blank">18611401994@163.com</a>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="4u 6u$(medium) 12u$(small)">
-                        <h3>所在地</h3>
-                        <ul class="alt">
-                            <li>
-                                中国 - 北京
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="4u$ 12u$(medium) 12u$(small)">
-                        <h3>社交</h3>
-                        <ul class="icons">
-                            <li><a href="https://github.com/lixiang1994" class="icon rounded fa-github"><span class="label">Github</span></a></li>
-                            <li><a href="http://weibo.com/5603919261/info" class="icon rounded fa-weibo"><span class="label">Sina</span></a></li>
-                            <li><a href="#" class="icon rounded fa-wechat"><span class="label">Wechat</span></a></li>
-                            <li><a href="#" class="icon rounded fa-apple"><span class="label">Apple</span></a></li>
-                            <li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                        </ul>
-                    </section>
-                </div>
-                <ul class="copyright">
-                    <li><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</li>
-                    <li><a href="https://yourdomain.com">LEE</a></li>
-                </ul>
-            </div>
-        </footer>
-
-    </div>
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-</body>
+		<!-- Scripts -->
+			<script src="{{assets "js/jquery.min.js"}}"></script>
+			<script src="{{assets "js/jquery.scrolly.min.js"}}"></script>
+			<script src="{{assets "js/jquery.scrollex.min.js"}}"></script>
+			<script src="{{assets "js/skel.min.js"}}"></script>
+			<script src="{{assets "js/util.js"}}"></script>
+			<script src="{{assets "js/main.js"}}"></script>
+			
+		{{ghost_foot}}
+		
+	</body>
 </html>
