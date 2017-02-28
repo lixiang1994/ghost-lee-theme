@@ -23,17 +23,13 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo"><a href="{{@blog.url}}">{{@blog.title}}<span></span></a></div>
-				<a href="#menu"><span>Menu</span></a>
+				{{#if @blog.navigation}}
+					<a href="#menu"><span>Menu</span></a>
+				{{/if}}
 			</header>
-
+		
 		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					{{#foreach navigation}}
-						<li><a href="{{url absolute="true"}}">{{label}}</a></li>
-					{{/foreach}}
-				</ul>
-			</nav>
+			{{navigation}}
 
 		<!-- Banner -->
 		<!--
