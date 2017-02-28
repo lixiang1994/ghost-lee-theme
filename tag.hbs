@@ -11,15 +11,22 @@
 <section id="banner" style="background-image: url({{tag.image}}){{else}}no-cover{{/if}}; padding: 5em 0em 5em">
     <h2>{{tag.name}}</h2>
 	<p>共{{posts}}篇文章</p>
-    <p>共篇文章</p>
 </section>
 
 {{! The main content area on the homepage }}
 <section id="two" class="wrapper style2 align-center">
     <div class="container">
         <div class="row">
-            {{! The tag below includes the post loop - partials/loop.hbs }}
-            {{> loop}}
+            {{#foreach posts}}
+				<section class="feature 6u 12u$(small) {{post_class}}">
+					<a href="{{url}}"><img class="image fit" src="{{image}}" alt="" /></a>
+					<h3 class="title"><a href="{{url}}">{{{title}}}</a></h3>
+					<p><p>{{excerpt words="26"}} <a class="read-more" href="{{url}}"> 更多</a></p></p>
+				</section>
+			{{/foreach}}
         </div>
+        {{#if pagination}}
+			{{pagination}}
+    	{{/if}}
     </div>
 </section>
