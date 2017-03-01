@@ -25,7 +25,9 @@
 	
 		<!-- Header -->
 			<header id="header" {{#is "home"}} {{else}} class="alt" {{/is}} >
-				<div class="logo"><a href="{{@blog.url}}">{{@blog.title}}<span></span></a></div>
+				<div class="logo">
+					<a href="{{@blog.url}}">{{@blog.title}}{{#is "tag"}}<span>-{{tag.name}}</span>{{/is}}</a>
+				</div>
 				{{#if @blog.navigation}}
 					<a href="#menu"><span>Menu</span></a>
 				{{/if}}
