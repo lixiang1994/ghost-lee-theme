@@ -8,6 +8,15 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+:root {
+    /* 主颜色 深灰色 */
+    --main-color: #333333;
+    /* 占位文字颜色 浅灰色 */
+    --placeholder-color: #BBBBBB;
+    /* 菜单颜色 灰色*/
+    --menu-color: #666666;
+}
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1792,6 +1801,7 @@
 
 	a {
 		color: #F64747;
+        text-decoration:none;
 	}
 
 	strong, b {
@@ -2939,7 +2949,7 @@
 					.wrapper.style1 input[type="button"].alt.icon:before,
 					.wrapper.style1 button.alt.icon:before,
 					.wrapper.style1 .button.alt.icon:before {
-						color: #fbb5b5;
+						color: var(--placeholder-color);
 					}
 
 				.wrapper.style1 input[type="submit"].special,
@@ -3002,23 +3012,23 @@
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
-				color: #fbb5b5 !important;
+				color: var(--placeholder-color) !important;
 			}
 
 			.wrapper.style1 :-moz-placeholder {
-				color: #fbb5b5 !important;
+				color: var(--placeholder-color) !important;
 			}
 
 			.wrapper.style1 ::-moz-placeholder {
-				color: #fbb5b5 !important;
+				color: var(--placeholder-color) !important;
 			}
 
 			.wrapper.style1 :-ms-input-placeholder {
-				color: #fbb5b5 !important;
+				color: var(--placeholder-color) !important;
 			}
 
 			.wrapper.style1 .formerize-placeholder {
-				color: #fbb5b5 !important;
+				color: var(--placeholder-color) !important;
 			}
 
 			.wrapper.style1 ul.alt li {
@@ -3026,7 +3036,7 @@
 			}
 
 			.wrapper.style1 header p {
-				color: #fbb5b5;
+				color: var(--placeholder-color);
 			}
 
 			.wrapper.style1 table tbody tr {
@@ -3344,7 +3354,7 @@
 
 		#header.alt {
 			top: 0;
-			background: #F64747;
+			background: var(--main-color);
 		}
 
 		#header .logo {
@@ -3473,7 +3483,7 @@
 		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #f64242;
+		background: var(--menu-color);
 		box-shadow: none;
 		color: #ffffff;
 		height: 100%;
@@ -3527,7 +3537,7 @@
 			transition: color 0.2s ease-in-out;
 			-webkit-tap-highlight-color: transparent;
 			border: 0;
-			color: #fbb5b5;
+			color: var(--placeholder-color);
 			cursor: pointer;
 			display: block;
 			height: 3.25em;
@@ -4185,10 +4195,10 @@
 /* Footer */
 
 	#footer {
-		background-color: #F64747;
-		color: #fdd1d1;
-		padding: 6em 0 4em 0;
-		background: #F64747;
+        background-color: var(--main-color);
+        color: #fdd1d1;
+        padding: 6em 0 4em 0;
+        background: var(--main-color);
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4276,7 +4286,7 @@
 				#footer input[type="button"].alt.icon:before,
 				#footer button.alt.icon:before,
 				#footer .button.alt.icon:before {
-					color: #fbb5b5;
+					color: var(--placeholder-color);
 				}
 
 			#footer input[type="submit"].special,
@@ -4339,23 +4349,23 @@
 		}
 
 		#footer ::-webkit-input-placeholder {
-			color: #fbb5b5 !important;
+			color: var(--placeholder-color) !important;
 		}
 
 		#footer :-moz-placeholder {
-			color: #fbb5b5 !important;
+			color: var(--placeholder-color) !important;
 		}
 
 		#footer ::-moz-placeholder {
-			color: #fbb5b5 !important;
+			color: var(--placeholder-color) !important;
 		}
 
 		#footer :-ms-input-placeholder {
-			color: #fbb5b5 !important;
+			color: var(--placeholder-color) !important;
 		}
 
 		#footer .formerize-placeholder {
-			color: #fbb5b5 !important;
+			color: var(--placeholder-color) !important;
 		}
 
 		#footer ul.alt li {
@@ -4363,7 +4373,7 @@
 		}
 
 		#footer header p {
-			color: #fbb5b5;
+			color: var(--placeholder-color);
 		}
 
 		#footer table tbody tr {
