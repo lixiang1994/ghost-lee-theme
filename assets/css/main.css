@@ -14,7 +14,7 @@
     /* 占位文字颜色 浅灰色 */
     --placeholder-color: #BBBBBB;
     /* 菜单颜色 灰色*/
-    --menu-color: #666666;
+    --menu-color: #444444;
 }
 
 /* Reset */
@@ -3466,7 +3466,7 @@
 			min-width: 320px;
 			top: 0;
 			font-size: .9em;
-			background: rgba(0, 0, 0, 0.9);
+			background: var(--main-color);
 		}
 
 	}
