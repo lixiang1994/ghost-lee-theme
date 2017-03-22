@@ -1,17 +1,27 @@
 <footer>
 	<ul class="actions">
-	{{# prev_post}}
-		<li>
-			<a href="{{url}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a>
-		</li>
-	{{/prev_post}}
-	{{# next_post}}
-		<li>
-			<a href="{{url}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a>
-		</li>
-	{{/next_post}}
+	<li>
+		{{#if prev}}
+			<a href="{{page_url prev}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a>
+		{{else}}
+			<a href="javascript:return false;" class="button alt icon fa-chevron-left" style="opacity: 0.4"><span class="label">上一篇</span></a>
+		{{/if}}
+	</li>
+	<li>
+		<div style="height: 48px;">
+			<p style="line-height:48px;">当前 {{page}} 共 {{pages}}页</p>
+		</div>
+	</li>
+	<li>
+		{{#if next}}
+			<a href="{{page_url next}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a>
+	 	{{else}}
+			<a href="javascript:return false;" class="button alt icon fa-chevron-right" style="opacity: 0.4"><span class="label">下一篇</span></a>
+	 	{{/if}}
+	 </li>
 	</ul>
 </footer>
+
 
 
 

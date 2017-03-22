@@ -2680,7 +2680,7 @@
 			@media screen and (max-width: 480px) {
 
 				ul.actions {
-					margin: 0 0 2em 0;
+					margin: 0 0 0 0;
 				}
 
 					ul.actions li {
@@ -3855,18 +3855,25 @@
 				margin-left: 3px;
 			}
 
+        #post ul {
+            text-align: center;
+        }
+
 		#post ul.actions li {
-			width: 49.5%;
+			width: auto;
 			margin: 0;
 			padding: 0;
+            text-align: center;
 		}
 
 			#post ul.actions li:first-child {
-				text-align: left;
+				text-align: center;
+                float: left;
 			}
 
 			#post ul.actions li:last-child {
-				text-align: right;
+				text-align: center;
+                float: right;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -3886,7 +3893,7 @@
 
 			#post ul.actions li {
 				display: inline-block;
-				width: 49%;
+				width: auto;
 				margin: 0;
 				padding: 0;
 			}
@@ -4409,7 +4416,7 @@
 
 		#footer .icons {
 			text-align: center;
-			padding-top: 2em 0 2em 0;
+			padding: 2em 0 2em 0;
 		}
 
 		#footer .copyright {
