@@ -1,19 +1,19 @@
 <footer>
 	<ul class="actions">
-	{{#if prev_post}}
+	{{# prev_post}}
 		<li>
-			{{# prev_post}}
+			
 				<a href="{{url}}" class="button alt icon fa-chevron-left"><span class="label">上一篇</span></a>
-			{{/prev_post}}
+			
 		</li>
-	{{/if}}
-	{{#if next_post}}
+	{{/prev_post}}
+	{{# next_post}}
 		<li>
-			{{# next_post}}
+			
 				<a href="{{url}}" class="button alt icon fa-chevron-right"><span class="label">下一篇</span></a>
-			{{/next_post}}
+			
 		</li>
-	{{/if}}
+	{{/next_post}}
 	</ul>
 </footer>
 
