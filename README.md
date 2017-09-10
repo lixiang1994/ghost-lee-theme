@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Casper
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
@@ -59,7 +59,3 @@ You can add your own SVG icons in the same manner.
 # Copyright & License
 
 Copyright (c) 2013-2017 Ghost Foundation - Released under the [MIT license](LICENSE).
-=======
-# ghost-lee-theme
-Ghost Blog Themes (LEE)
->>>>>>> origin/casper
