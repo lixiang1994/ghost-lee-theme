@@ -447,7 +447,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: Georgia, serif;
+/*    font-family: Georgia, serif;*/
 }
 
 .post-card-meta {
@@ -901,7 +901,7 @@ Usage (In Ghost editor):
     padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+/*    font-family: Georgia,serif;*/
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1595,7 +1595,7 @@ Usage (In Ghost editor):
     justify-content: center;
     align-items: center;
     margin: 0 0 10px 0;
-    font-family: Georgia, serif;
+/*    font-family: Georgia, serif;*/
     font-style: italic;
 }
 
@@ -1734,7 +1734,7 @@ Usage (In Ghost editor):
 .subscribe-overlay-description {
     max-width: 650px;
     margin: 0 auto 50px;
-    font-family: Georgia, serif;
+/*    font-family: Georgia, serif;*/
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 300;
