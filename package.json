@@ -28,8 +28,8 @@
         "theme"
     ],
     "repository": {
-        "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "type": "zip",
+        "url": "https://github.com/lixiang1994/ghost-lee-theme/archive/casper.zip"
     },
     "bugs": "https://github.com/TryGhost/Casper/issues",
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
