@@ -12,9 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{!-- Styles'n'Scripts --}}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" /> --}}
-	<link rel="stylesheet" type="text/css" href="http://blog-resources.lee1994.com/css/screen.css" />
-   
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+   	
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -62,17 +61,13 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-    {{!-- <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script> --}}
-	
-	<script type="text/javascript" src="http://blog-resources.lee1994.com/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
   
     {{#if pagination.pages}}
     <script>
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
-    {{!-- <script src="{{asset "js/infinitescroll.js"}}"></script> --}}
-    
-    <script src="http://blog-resources.lee1994.com/js/infinitescroll.js"></script> 
+    <script src="{{asset "js/infinitescroll.js"}}"></script> 
     
     {{/if}}
 
